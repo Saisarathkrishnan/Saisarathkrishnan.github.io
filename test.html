@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let nums = "abcabcbb";
+        function longestPalindromicSubstring(str) {
+            let longestPalindrome = '';
+
+            for (let i = 0; i < str.length; i++) {
+                for (let j = i; j < str.length; j++) {
+                    const substring = str.slice(i, j + 1);
+                    console.log(substring);
+                    if (isPalindrome(substring) && substring.length > longestPalindrome.length) {
+                        longestPalindrome = substring;
+                    }
+                }
+            }
+
+            return longestPalindrome;
+        }
+
+        function isPalindrome(str) {
+            const reversedStr = str.split('').reverse().join('');
+            return str === reversedStr;
+        }
+
+        // Example usage
+        const inputStr = 'babad';
+        const longestPalindromeSubstring = longestPalindromicSubstring(inputStr);
+        console.log(longestPalindromeSubstring);
+    </script>
+</body>
+
+</html>

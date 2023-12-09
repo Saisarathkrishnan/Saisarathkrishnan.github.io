@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chess</title>
+    <link rel="icon" href="Assets/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="body-container">
+        <div class="board">
+            <div class="board-layout">
+            </div>
+        </div>
+        <div class="right" >
+            <input placeholder="enter FEN">
+            <button onclick="
+            refresh(document.querySelector('input').value);             
+             document.querySelector('input').value='';
+            ">HI</button>
+        </div>
+    </div>
+    <script src="function.js"></script>
+    <script src="legal.js"></script>
+    <script src="process.js"></script>
+    <!--
+    <img src="Assets/piece_images/White_King.png">
+    <img src="Assets/piece_images/White_Queen.png">
+    <img src="Assets/piece_images/White_Bishop.png">
+    <img src="Assets/piece_images/White_Knight.png">
+    <img src="Assets/piece_images/White_Rook.png">
+    <img src="Assets/piece_images/White_Pawn.png">
+<p></p>
+    <img src="Assets/piece_images/Black_King.png">
+    <img src="Assets/piece_images/Black_Queen.png">
+    <img src="Assets/piece_images/Black_Bishop.png">
+    <img src="Assets/piece_images/Black_Knight.png">
+    <img src="Assets/piece_images/Black_Rook.png">
+    <img src="Assets/piece_images/Black_Pawn.png">
+        -->
+
+</body>
+
+
+
+</html>

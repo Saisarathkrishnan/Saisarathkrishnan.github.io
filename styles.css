@@ -1,0 +1,143 @@
+body {
+    margin: 0 0 0 0;
+    font-family: Arial;
+    color: white;
+
+    background-color: rgb(37, 37, 37);
+}
+
+.header {
+    background-color: lightcoral;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 1000;
+}
+
+.body-container {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    max-height: 960px;
+    background-color: rgb(37, 37, 37);
+    position: fixed;
+    bottom: 0;
+    top: 65px;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width:990px) {
+    .body-container {
+        grid-template-columns: 20fr 1fr;
+    }
+
+}
+
+.board {
+    position: relative;
+    min-height: 200px;
+    max-height: 800 px;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+-moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.black {
+    background-color: rgb(181, 137, 98);
+    
+}
+
+.white {
+    background-color: rgb(240, 216, 180);
+}
+
+.white,
+.black {
+    display: flex;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+.shade{
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 5px;
+    border: solid;
+    border-color: rgb(70, 107, 75);
+    display: flex;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin: none;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    min-height: 20px;
+    
+    z-index: 5;
+
+}
+.shade2{
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 5px;
+    border: solid;
+    border-color: rgb(255, 0, 0);
+    display: flex;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin: none;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    min-height: 20px;
+    
+    z-index: 100;
+
+}
+
+
+
+.board-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border: solid;
+    border-width: 10px;
+    border-color: rgb(0, 0, 0);
+    max-height: 900px;
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+}
+
+.piece {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    z-index: 100;
+    cursor: grab;
+}
+.piece:active{
+    cursor: grabbing;
+}
+
+.right {
+    display: relative;
+    top: 0;
+    background-color: lightpink;
+}
